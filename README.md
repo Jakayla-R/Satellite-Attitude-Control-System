@@ -1,47 +1,29 @@
 # Satellite Attitude Control System
-Objective:
-To understand the basics of satellite attitude control by modeling and simulating a control system using MATLAB/Simulink.
 
-Workflow Steps:
-1. Basic System Modeling
-\
- a. Simple Dynamics:
-      Model a basic satellite with 3-DOF (pitch, yaw, roll) using simple equations of motion.
-      Use a single reaction wheel or torque rod for control.
-   \
-  b. Simulink Setup:
-      Create a straightforward Simulink model with blocks representing the satellite and control mechanism.
-2. Basic Control Design
-\
-  a. PID Control:
-      Implement a basic PID controller in Simulink to stabilize one axis of the satellite.
-   \
-  b. Initial Testing:
-      Run the simulation to observe how the PID controller adjusts the satellite's orientation.
-4. Code Generation
-\
-  a. MATLAB Autocoder:
-      Generate C code from the PID controller model using MATLAB Coder.
-   \
-  b. Review the Code:
-      Look at the generated code to understand how the MATLAB/Simulink model translates into C.
-6. Simple Validation
-\
-  a. Run on MATLAB:
-      Validate the generated code by running it within MATLAB or on a simple microcontroller.
+MATLAB simulation of satellite pitch axis dynamics with PID control implementation.
 
-   
-Project Deliverables:
-\
--Simulink Model: Basic model of the satellite control system.
-\
--Simulation Results: Basic plots showing the system's behavior.
-\
--Generated Code: Simple C code for the PID controller.
-\
--Documentation: A brief summary of what you’ve learned and how the system works.
+## Overview
 
+Models satellite attitude control using fundamental orbital mechanics and control theory. Demonstrates pitch axis stabilization through Euler integration and torque-based control.
 
-Tools and Resources:
-Software: MATLAB, Simulink, MATLAB Coder.
+## Implementation
 
+- 3-DOF satellite dynamics modeling
+- PID controller for attitude stabilization  
+- MATLAB code generation to C (embedded systems deployment)
+- Euler integration for real-time simulation
+
+## Simulation Results
+
+![Satellite Pitch Dynamics](SAC.png)
+
+*10-second simulation showing linear pitch velocity response under constant torque input. System demonstrates stable dynamics with predictable angular acceleration.*
+
+## Technical Details
+
+**Parameters:**
+- Moment of inertia: 10 kg⋅m²
+- Initial torque: 20 N⋅m
+- Time step: 0.01s
+
+**Technologies:** MATLAB | Simulink | C Code Generation
